@@ -14,8 +14,9 @@
     </div>
 </div>
 
-<div class="alert alert-danger">
-    No se encontro nada con ese termino
+<div  *ngIf="hayError"
+      class="alert alert-danger">
+    No se encontro nada con el término {{termino}}
 </div>
 
 <div class="row">
