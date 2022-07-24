@@ -3,6 +3,7 @@
         <tr >
             <th>#</th>
             <th>Nombre</th>
+            <th>Capital</th>
             <th>Bandera</th>
             <th>Población</th>
             <th></th>
@@ -12,6 +13,7 @@
         <tr *ngFor="let item of paises; let i=index">
             <th>{{i+1}}</th>
             <th>{{item.name.official}}</th>
+            <th>{{item.capital}}</th>
             <th><img src="{{item.flags.png }}" alt="Imagen bandera" class="small-flag"> </th>
             <th>{{item.population | number}}</th>
             <td><a [routerLink]="[ '/pais', item.cca3 ]">Ver país   </a> </td>
