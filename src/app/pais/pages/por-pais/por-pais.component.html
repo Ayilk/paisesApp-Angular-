@@ -10,7 +10,23 @@
                            placeholder="Buscar pais..."></app-pais-input>
         </div>
     </div>
-<hr/>
+<ul class="list-group">
+    <li  *ngFor="let pais of paisesSugeridos"
+         class="list-group-item list-group-item-action">
+        <a class="nav-link"
+           [routerLink]="['/pais', pais.ccn3]">
+           {{pais.name.official}} 
+        </a>
+    </li>
+    <li  class="list-group-item list-group-item-action"
+         (click)="buscarSugerido(termino)">
+        <a class="nav-link">
+           Buscar "{{termino}} "
+        </a>
+    </li>
+</ul>
+
+
 </div>
 
 <div  *ngIf="hayError"
